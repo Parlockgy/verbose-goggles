@@ -1,5 +1,5 @@
 {
-  "geode": "v5.11.2",
+  "geode": "5.11.2",
   "gd": {
     "android": "2.2081"
   },
@@ -8,7 +8,11 @@
   "version": "v1.0.0",
   "developer": "Pumpkinman",
   "description": "Change the size of your player and spikes in any level.",
-  "tags": ["gameplay", "customization", "joke"],
+  "tags": [
+    "gameplay",
+    "customization",
+    "joke"
+  ],
   "settings": {
     "enabled": {
       "name": "Enable Size Mayhem",
