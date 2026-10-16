@@ -84,8 +84,10 @@ class $modify(SizeMayhemPlayLayer, PlayLayer) {
         }
 
         std::unordered_set<GameObject*> activeSpikes;
-        for (auto object : m_objects) {
-            if (!object || !isSizeMayhemSpike(object->m_objectID)) {
+        if (m_objects) {
+            for (unsigned int i = 0; i < m_objects->count(); ++i) {
+                auto object = static_cast<GameObject*>(m_objects->objectAtIndex(i));
+                if (!object || !isSizeMayhemSpike(object->m_objectID)) {
                 continue;
             }
 
@@ -102,10 +104,11 @@ class $modify(SizeMayhemPlayLayer, PlayLayer) {
 
                 object->setScaleX(state->second.scaleX * spikeMultiplier);
                 object->setScaleY(state->second.scaleY * spikeMultiplier);
-            } else if (state != g_spikeBaseScales.end()) {
-                object->setScaleX(state->second.scaleX);
-                object->setScaleY(state->second.scaleY);
-                g_spikeBaseScales.erase(state);
+                } else if (state != g_spikeBaseScales.end()) {
+                    object->setScaleX(state->second.scaleX);
+                    object->setScaleY(state->second.scaleY);
+                    g_spikeBaseScales.erase(state);
+                }
             }
         }
 
