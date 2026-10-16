@@ -1,0 +1,46 @@
+{
+  "geode": "v5.11.2",
+  "gd": {
+    "android": "2.2081"
+  },
+  "id": "pumpkinman.size-mayhem",
+  "name": "Size Mayhem",
+  "version": "v1.0.0",
+  "developer": "Pumpkinman",
+  "description": "Change the size of your player and spikes in any level.",
+  "tags": ["gameplay", "customization", "joke"],
+  "settings": {
+    "enabled": {
+      "name": "Enable Size Mayhem",
+      "description": "Applies the custom player and spike sizes during gameplay.",
+      "type": "bool",
+      "default": false
+    },
+    "player-scale": {
+      "name": "Player size",
+      "description": "Player scale multiplier. 1.0 is the original size.",
+      "type": "float",
+      "default": 1.0,
+      "min": 0.25,
+      "max": 4.0,
+      "control": {
+        "slider": true,
+        "slider-step": 0.05,
+        "input": true
+      }
+    },
+    "spike-scale": {
+      "name": "Spike size",
+      "description": "Spike scale multiplier. 1.0 is the original size.",
+      "type": "float",
+      "default": 1.0,
+      "min": 0.25,
+      "max": 4.0,
+      "control": {
+        "slider": true,
+        "slider-step": 0.05,
+        "input": true
+      }
+    }
+  }
+}
